@@ -12,7 +12,7 @@ const items = [
   '603 WEBSITES',
   'SKI ENTHUSIAST',
   'GOLFER',
-  'INTERNSHIP READY',
+  'CIRTRONICS INTERN',
   'CLASS OF 2027',
 ]
 

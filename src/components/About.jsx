@@ -35,7 +35,7 @@ const highlights = [
     icon: Target,
     title:  'Naval Academy Accepted',
     sub:    'Class of 2028',
-    detail: 'Medical disqualification',
+    detail: 'United States Naval Academy',
     color:  '#8b5cf6',
   },
   {
@@ -125,9 +125,11 @@ const About = () => {
               <>
                 I'm a{' '}
                 <span className="text-cu-gold-light font-medium">Mechanical Engineering student</span>{' '}
-                at the University of Colorado Boulder with minors in Mathematics and Aerospace Engineering.
-                My engineering journey is fueled by a deep curiosity for how things work and a drive to
-                design innovative solutions.
+                at the University of Colorado Boulder with minors in Mathematics and Aerospace Engineering,
+                currently interning at{' '}
+                <span className="text-cu-gold-light font-medium">Cirtronics Corporation</span>, a contract
+                manufacturer serving the medical device, robotics, and defense industries. My engineering
+                journey is fueled by a deep curiosity for how things work and a drive to design innovative solutions.
               </>,
               <>
                 Before transferring to CU Boulder, I completed coursework at{' '}

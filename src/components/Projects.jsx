@@ -220,7 +220,7 @@ const Projects = () => {
                   </h3>
                 </div>
               </div>
-              <TitleBlock dwgNo="LC-003" rev="A" date="2024" />
+              <TitleBlock dwgNo="LC-003" rev="B" date="2026" />
             </div>
 
             <div className="p-6">
@@ -231,23 +231,25 @@ const Projects = () => {
                   <p className="text-dark-300 text-sm leading-relaxed mb-4">
                     I co-founded{' '}
                     <span className="text-cu-gold font-semibold">603 Websites</span>{' '}
-                    with Louis Sader — a web studio named after the NH area code where it all started.
-                    Our mission is simple: build <span className="text-white font-medium">beautiful, unique, affordable websites</span> for
-                    professionals and businesses who deserve more than a cookie-cutter template.
+                    with Louis Sader — a registered web design studio named after the NH area code where it all started.
+                    We've grown it to <span className="text-white font-medium">3 retained clients generating $900/month in recurring revenue</span>,
+                    building beautiful, unique, affordable websites for professionals and businesses who deserve more than a cookie-cutter template.
                   </p>
                   <p className="text-dark-300 text-sm leading-relaxed mb-6">
                     The portfolio you're looking at right now was <span className="text-white font-medium">designed and built entirely by me</span> —
                     hand-coded from a blank file in React, Vite, and Tailwind CSS.
                     Every animation, color choice, and layout decision is custom. No themes. No drag-and-drop.
-                    This is what we deliver to every client.
+                    This is what we deliver to every client. We also run targeted{' '}
+                    <span className="text-white font-medium">Meta (Facebook & Instagram) ad campaigns</span> for clients,
+                    using Claude AI to sharpen ad copy, audience targeting, and campaign performance.
                   </p>
 
                   {/* Stats row */}
                   <div className="grid grid-cols-3 gap-4 mb-6 pb-6 border-b border-dark-700/40">
                     {[
-                      { value: '3+', label: 'Sites Built' },
-                      { value: '2',  label: 'Founders'    },
-                      { value: '$0', label: 'Templates Used' },
+                      { value: '3',    label: 'Retained Clients' },
+                      { value: '$900', label: 'Monthly Recurring' },
+                      { value: '$0',   label: 'Templates Used' },
                     ].map((s, i) => (
                       <div key={i} className="text-center">
                         <div className="text-2xl font-black font-mono gradient-text leading-none mb-1">{s.value}</div>
@@ -265,7 +267,7 @@ const Projects = () => {
 
                   {/* CTA */}
                   <a
-                    href="https://portfolio-showcase-ebon.vercel.app/"
+                    href="https://websiteupgraderpro.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-cu-gold text-black text-sm font-bold tracking-[0.12em] uppercase hover:bg-cu-gold-light transition-colors duration-200 group/btn"

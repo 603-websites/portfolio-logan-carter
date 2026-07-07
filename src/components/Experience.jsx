@@ -32,15 +32,30 @@ const TimelineNode = ({ active, color, delay, isInView }) => (
 
 const experiences = [
   {
-    title:   'Sales Intern',
-    company: 'ALKU',
-    location:'Andover, MA',
-    period:  'June 2025 – Dec 2025',
+    title:   'Mechanical Engineering Intern',
+    company: 'Cirtronics Corporation',
+    location:'Milford, NH',
+    period:  'May 2026 – Present',
     active:  true,
     color:   '#CFB87C',
     dwg:     'EXP-001',
     description: [
-      'Recruiting intern sourcing information about professionals currently seeking new career opportunities in engineering and technology fields.',
+      'Support mechanical engineers at an FDA- and ITAR-registered contract manufacturer serving the medical device, robotics, and defense industries.',
+      'Assist with electro-mechanical assembly and complex box-build projects, contributing to fixturing, assembly documentation, and design-for-manufacturability reviews.',
+      'Shadow senior engineers through new product introduction (NPI), gaining hands-on exposure to production processes, testing, and quality standards (ISO 9001/13485).',
+    ],
+    technologies: ['Contract Manufacturing', 'DFM', 'NPI', 'ISO 9001/13485'],
+  },
+  {
+    title:   'Sales Intern',
+    company: 'ALKU',
+    location:'Andover, MA',
+    period:  'June 2025 – Dec 2025',
+    active:  false,
+    color:   '#38bdf8',
+    dwg:     'EXP-002',
+    description: [
+      'Sourced and screened candidates for specialized engineering roles, supporting full-cycle recruiting in a fast-paced consulting environment.',
       'Gained valuable communication skills by engaging with PhD engineers with 20+ years of experience, helping to place them in highly competitive roles.',
     ],
     technologies: ['Recruiting', 'Communication', 'Engineering Talent', 'Networking'],
@@ -52,7 +67,7 @@ const experiences = [
     period:  'Apr 2024 – Sep 2024',
     active:  false,
     color:   '#f59e0b',
-    dwg:     'EXP-002',
+    dwg:     'EXP-003',
     description: [
       'Collected golf balls daily from the driving range to ensure smooth flow of play and maintained all equipment.',
       'Cleaned and maintained every cart after use, worked the cash register, and provided customer assistance.',
@@ -66,7 +81,7 @@ const experiences = [
     period:  'May 2023 – Aug 2023',
     active:  false,
     color:   '#8b5cf6',
-    dwg:     'EXP-003',
+    dwg:     'EXP-004',
     description: [
       'Assisted in evaluation and selection of medical records, identifying those that were current and those requiring re-evaluation.',
     ],
@@ -79,7 +94,7 @@ const experiences = [
     period:  'May 2021 – Sep 2022',
     active:  false,
     color:   '#10b981',
-    dwg:     'EXP-004',
+    dwg:     'EXP-005',
     description: [
       'Performed mowing, trimming, edging, weeding, and mulching lawns. Installed underground piping systems.',
     ],

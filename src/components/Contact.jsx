@@ -42,7 +42,7 @@ const Contact = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="section-subheading mx-auto">
-            I'm actively seeking engineering internship opportunities. Let's connect.
+            Currently a Mechanical Engineering Intern at Cirtronics — always open to what's next. Let's connect.
           </p>
         </motion.div>
 
