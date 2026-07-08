@@ -139,10 +139,17 @@ const About = () => {
                 Class of 2028, demonstrating my commitment to discipline and service.
               </>,
               <>
-                I bring a unique combination of{' '}
-                <span className="text-cu-gold-light font-medium">technical expertise and leadership</span>{' '}
-                to every project. Whether executing multi-phase design projects, leading construction
-                initiatives, or building client websites — I thrive on challenges that push me to grow.
+                My technical foundation spans{' '}
+                <span className="text-cu-gold-light font-medium">CAD design, FEA, thermodynamics, and controls</span>:
+                SolidWorks modeling, ANSYS simulation, Arduino-based data acquisition, and MATLAB analysis.
+                I apply that toolset to everything from multi-phase design projects to energy-harvesting
+                prototypes.
+              </>,
+              <>
+                Long term, I'm driven toward{' '}
+                <span className="text-cu-gold-light font-medium">government contracting and defense engineering</span>:
+                aerospace systems, missile and engine design, and advanced propulsion — developing new ways
+                to power and fuel the government projects that matter most.
               </>,
             ].map((para, i) => (
               <motion.p

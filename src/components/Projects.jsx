@@ -39,6 +39,42 @@ const YouTubeEmbed = ({ videoId }) => {
   )
 }
 
+// Lazy-loaded local video embed (same styling as YouTubeEmbed)
+const LocalVideoEmbed = ({ src, label }) => {
+  const ref = useRef(null)
+  const [isVisible, setIsVisible] = useState(false)
+  const [hasLoaded,  setHasLoaded]  = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting && !hasLoaded) { setIsVisible(true); setHasLoaded(true) } },
+      { threshold: 0.3 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [hasLoaded])
+
+  return (
+    <div ref={ref} className="relative w-full aspect-[9/16] max-w-[260px] mx-auto rounded-xl overflow-hidden bg-dark-800 border border-cu-gold/15">
+      {!isVisible ? (
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-dark-900">
+          <div className="w-14 h-14 rounded-full bg-cu-gold/15 flex items-center justify-center mb-3">
+            <Play size={24} className="text-cu-gold ml-1" />
+          </div>
+          <p className="font-mono text-[10px] text-dark-500 tracking-wider">SCROLL TO LOAD</p>
+        </div>
+      ) : (
+        <video
+          src={src}
+          title={label}
+          autoPlay muted loop playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
+    </div>
+  )
+}
+
 // Engineering drawing title block badge
 const TitleBlock = ({ dwgNo, rev, date }) => (
   <div className="flex items-stretch border border-dark-700/60 rounded overflow-hidden font-mono text-[8px] text-dark-600">
@@ -80,14 +116,27 @@ const projects = [
     date:         '2024',
     videoId:      null,
   },
+  {
+    title:        'REPS — Renewable Energy Power System',
+    description:  'GEEN 1400 final project: a rowing machine that harvests human power to charge a phone. Pulling the handle spins a screw-pulley drivetrain that back-drives a DC motor as a generator; the raw output runs through a bridge rectifier and buck converter, with voltage and current sensors feeding an Arduino that manages battery storage and a regulated 5V USB output.',
+    icon:         Zap,
+    highlights:   ['Screw-pulley generator drivetrain', 'Rectifier + buck converter power electronics', 'Arduino voltage/current monitoring', 'Tested 200–500 RPM · ≥5V USB output', 'Prototype built for $44.75', 'Est. $6–$15/unit at production scale'],
+    technologies: ['SolidWorks', 'Arduino', 'Fusion 360', 'MATLAB', '3D Printing', 'Power Electronics'],
+    featured:     true,
+    accent:       '#10b981',
+    dwgNo:        'LC-004',
+    rev:          'A',
+    date:         '2026',
+    videoSrc:     '/videos/reps-demo.mp4',
+  },
 ]
 
-// 603 Websites feature cards
+// Website Upgrader Pro feature cards
 const studioFeatures = [
   {
     icon: Code2,
-    title: 'Built From Scratch',
-    desc: 'No templates. Every site — including this one — is hand-coded in React, Vite, and Tailwind CSS with custom animations.',
+    title: 'AI-Powered, Built From Scratch',
+    desc: 'No templates. Every site, including this one, is built from scratch in React, Vite, and Tailwind CSS using Claude AI to move fast without sacrificing quality.',
     color: '#CFB87C',
   },
   {
@@ -196,7 +245,65 @@ const Projects = () => {
           )
         })()}
 
-        {/* ── LC-003: 603 Websites — Full featured card ── */}
+        {/* ── LC-004: REPS — Featured with video ── */}
+        {(() => {
+          const reps = projects[2]
+          const RepsIcon = reps.icon
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.55, delay: 0.22 }}
+              className="relative mb-8 group"
+            >
+              <div className="relative glass rounded-2xl overflow-hidden card-hover">
+                <div className="h-[2px] w-full" style={{ background: `linear-gradient(90deg, ${reps.accent}, transparent)` }} />
+                <div className="flex items-center justify-between px-6 py-4 border-b border-dark-700/40">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center" style={{ backgroundColor: `${reps.accent}20`, border: `1px solid ${reps.accent}40` }}>
+                      <RepsIcon size={22} style={{ color: reps.accent }} />
+                    </div>
+                    <div>
+                      <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT — {reps.dwgNo}</span>
+                      <h3 className="text-base font-semibold text-white group-hover:text-cu-gold-light transition-colors">
+                        {reps.title}
+                      </h3>
+                    </div>
+                  </div>
+                  <TitleBlock dwgNo={reps.dwgNo} rev={reps.rev} date={reps.date} />
+                </div>
+                <div className="p-6">
+                  <div className="grid lg:grid-cols-2 gap-8 items-start">
+                    <div>
+                      <p className="text-dark-400 text-sm mb-5 leading-relaxed">{reps.description}</p>
+                      <div className="grid sm:grid-cols-2 gap-2 mb-5">
+                        {reps.highlights.map(h => (
+                          <div key={h} className="flex items-center gap-2 text-xs text-dark-300">
+                            <span className="w-1 h-1 rounded-full shrink-0" style={{ backgroundColor: reps.accent }} />
+                            {h}
+                          </div>
+                        ))}
+                      </div>
+                      <div className="flex flex-wrap gap-2 pt-4 border-t border-dark-700/40">
+                        {reps.technologies.map(tech => (
+                          <span key={tech} className="blueprint-badge">{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                    <LocalVideoEmbed src={reps.videoSrc} label="REPS rowing machine charging a phone" />
+                  </div>
+                </div>
+              </div>
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="border-2 border-green-500/40 rounded px-2 py-0.5 rotate-[-12deg]">
+                  <span className="font-mono text-[9px] text-green-500/60 tracking-widest font-bold">TESTED</span>
+                </div>
+              </div>
+            </motion.div>
+          )
+        })()}
+
+        {/* ── LC-003: Website Upgrader Pro — Full featured card ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -216,7 +323,7 @@ const Projects = () => {
                 <div>
                   <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT — LC-003</span>
                   <h3 className="text-base font-semibold text-white group-hover:text-cu-gold transition-colors">
-                    603 Websites — Portfolio & Web Studio
+                    Website Upgrader Pro — Web Design Studio
                   </h3>
                 </div>
               </div>
@@ -230,16 +337,16 @@ const Projects = () => {
                 <div>
                   <p className="text-dark-300 text-sm leading-relaxed mb-4">
                     I co-founded{' '}
-                    <span className="text-cu-gold font-semibold">603 Websites</span>{' '}
-                    with Louis Sader — a registered web design studio named after the NH area code where it all started.
+                    <span className="text-cu-gold font-semibold">Website Upgrader Pro</span>{' '}
+                    with Louis Sader, a registered web design studio.
                     We've grown it to <span className="text-white font-medium">3 retained clients generating $900/month in recurring revenue</span>,
                     building beautiful, unique, affordable websites for professionals and businesses who deserve more than a cookie-cutter template.
                   </p>
                   <p className="text-dark-300 text-sm leading-relaxed mb-6">
-                    The portfolio you're looking at right now was <span className="text-white font-medium">designed and built entirely by me</span> —
-                    hand-coded from a blank file in React, Vite, and Tailwind CSS.
-                    Every animation, color choice, and layout decision is custom. No themes. No drag-and-drop.
-                    This is what we deliver to every client. We also run targeted{' '}
+                    The portfolio you're looking at right now was <span className="text-white font-medium">built from scratch by me using Claude AI</span> in
+                    React, Vite, and Tailwind CSS. No themes, no drag-and-drop builders. I'm fluent in the new
+                    generation of AI tools and use them to design, build, and ship custom sites faster than
+                    traditional development ever could. We also run targeted{' '}
                     <span className="text-white font-medium">Meta (Facebook & Instagram) ad campaigns</span> for clients,
                     using Claude AI to sharpen ad copy, audience targeting, and campaign performance.
                   </p>
@@ -273,7 +380,7 @@ const Projects = () => {
                     className="inline-flex items-center gap-2 px-6 py-3 bg-cu-gold text-black text-sm font-bold tracking-[0.12em] uppercase hover:bg-cu-gold-light transition-colors duration-200 group/btn"
                   >
                     <Globe size={15} />
-                    VIEW PORTFOLIO SHOWCASE
+                    VIEW WEBSITE
                     <ExternalLink size={12} className="opacity-60 group-hover/btn:opacity-100 transition-opacity" />
                   </a>
                 </div>

@@ -1,4 +1,103 @@
 import { motion } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+
+// Math / physics / engineering equations that drift across the grid
+const EQUATIONS = [
+  'F = ma',
+  'E = mc²',
+  'σ = My/I',
+  'τ = VQ/It',
+  'δ = PL/AE',
+  'F = -kx',
+  'KE = ½mv²',
+  'PV = nRT',
+  'Q̇ = ṁcₚΔT',
+  'η = W/Qₕ',
+  'T ds = dh − v dp',
+  'Re = ρvD/μ',
+  'p + ½ρv² + ρgh = const',
+  'L = ½ρv²SC_L',
+  'Δv = vₑ ln(m₀/m_f)',
+  'Isp = F/(ṁg₀)',
+  '∇·E = ρ/ε₀',
+  '∮B·dl = μ₀I',
+  'V = IR',
+  'ω = 2πf',
+  'ΣF = 0  ΣM = 0',
+  'M = EI(d²y/dx²)',
+  'x(t) = Ae^(−ζωₙt)cos(ω_d t)',
+  '∂²u/∂t² = c²∇²u',
+  'σ′ = √(σₓ² − σₓσᵧ + σᵧ² + 3τ²)',
+  'a² + b² = c²',
+  '∫F·ds = ΔKE',
+  'dQ = T dS',
+]
+
+// Continuously drifting equations — wrap around screen edges
+const FloatingEquations = () => {
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+    const nodes = Array.from(container.children)
+    const M = 140 // off-screen margin before wrapping
+
+    const items = nodes.map((el) => {
+      const speed = 12 + Math.random() * 22 // px per second
+      const angle = Math.random() * Math.PI * 2
+      return {
+        el,
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        wobble: Math.random() * Math.PI * 2,
+        wobbleSpeed: 0.25 + Math.random() * 0.5,
+      }
+    })
+
+    let last = performance.now()
+    let raf
+    const tick = (now) => {
+      const dt = Math.min((now - last) / 1000, 0.1)
+      last = now
+      const w = window.innerWidth
+      const h = window.innerHeight
+      for (const it of items) {
+        it.wobble += it.wobbleSpeed * dt
+        it.x += (it.vx + Math.sin(it.wobble) * 7) * dt
+        it.y += (it.vy + Math.cos(it.wobble * 0.8) * 7) * dt
+        // Wrap: drift off one edge, reappear on the other
+        if (it.x > w + M) it.x = -M
+        if (it.x < -M)    it.x = w + M
+        if (it.y > h + M) it.y = -M
+        if (it.y < -M)    it.y = h + M
+        it.el.style.transform = `translate(${it.x}px, ${it.y}px)`
+      }
+      raf = requestAnimationFrame(tick)
+    }
+    raf = requestAnimationFrame(tick)
+    return () => cancelAnimationFrame(raf)
+  }, [])
+
+  return (
+    <div ref={containerRef} className="absolute inset-0">
+      {EQUATIONS.map((eq, i) => (
+        <span
+          key={i}
+          className="absolute top-0 left-0 font-mono whitespace-nowrap select-none will-change-transform"
+          style={{
+            fontSize: `${10 + (i % 4) * 2}px`,
+            color: i % 3 === 0 ? 'rgba(207, 184, 124, 0.14)' : 'rgba(255, 255, 255, 0.09)',
+          }}
+        >
+          {eq}
+        </span>
+      ))}
+    </div>
+  )
+}
 
 // Floating engineering annotations
 const annotations = [
@@ -63,6 +162,9 @@ const GearIcon = ({ r = 48, teeth = 12, color = '#CFB87C', opacity = 0.06, speed
 
 const ParticleBackground = () => (
   <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
+
+    {/* Drifting equations — above grid, below all content */}
+    <FloatingEquations />
 
     {/* Floating annotations */}
     {annotations.map((a, i) => (
