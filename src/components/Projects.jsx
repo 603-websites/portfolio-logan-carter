@@ -91,7 +91,7 @@ const TitleBlock = ({ dwgNo, rev, date }) => (
 
 const projects = [
   {
-    title:        'GEEN 1400 — Engineering Design Project',
+    title:        'GEEN 1400 - Engineering Design Project',
     description:  'Multi-phase engineering design project at CU Boulder encompassing concept development, CAD modeling, fabrication, and testing of working prototypes with iterative design improvements.',
     icon:         Cog,
     highlights:   ['Full design lifecycle execution', 'CAD modeling & prototyping', 'Testing & validation process', 'Design Expo final presentation'],
@@ -117,7 +117,7 @@ const projects = [
     videoId:      null,
   },
   {
-    title:        'REPS — Renewable Energy Power System',
+    title:        'REPS - Renewable Energy Power System',
     description:  'GEEN 1400 final project: a rowing machine that harvests human power to charge a phone. Pulling the handle spins a screw-pulley drivetrain that back-drives a DC motor as a generator; the raw output runs through a bridge rectifier and buck converter, with voltage and current sensors feeding an Arduino that manages battery storage and a regulated 5V USB output.',
     icon:         Zap,
     highlights:   ['Screw-pulley generator drivetrain', 'Rectifier + buck converter power electronics', 'Arduino voltage/current monitoring', 'Tested 200–500 RPM · ≥5V USB output', 'Prototype built for $44.75', 'Est. $6–$15/unit at production scale'],
@@ -154,7 +154,7 @@ const studioFeatures = [
   {
     icon: Building2,
     title: 'Growing Into Companies',
-    desc: "Our goal is to expand beyond portfolios — landing pages, marketing sites, and full web presences for businesses that need one.",
+    desc: "Our goal is to expand beyond portfolios, landing pages, marketing sites, and full web presences for businesses that need one.",
     color: '#A2A4A3',
   },
 ]
@@ -188,7 +188,7 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* ── LC-001: GEEN 1400 — Featured with video ── */}
+        {/* ── LC-001: GEEN 1400 - Featured with video ── */}
         {(() => {
           const FeaturedIcon = projects[0].icon
           return (
@@ -206,7 +206,7 @@ const Projects = () => {
                       <FeaturedIcon size={22} style={{ color: projects[0].accent }} />
                     </div>
                     <div>
-                      <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT — {projects[0].dwgNo}</span>
+                      <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT - {projects[0].dwgNo}</span>
                       <h3 className="text-base font-semibold text-white group-hover:text-cu-gold-light transition-colors">
                         {projects[0].title}
                       </h3>
@@ -245,7 +245,7 @@ const Projects = () => {
           )
         })()}
 
-        {/* ── LC-004: REPS — Featured with video ── */}
+        {/* ── LC-004: REPS - Featured with video ── */}
         {(() => {
           const reps = projects[2]
           const RepsIcon = reps.icon
@@ -264,7 +264,7 @@ const Projects = () => {
                       <RepsIcon size={22} style={{ color: reps.accent }} />
                     </div>
                     <div>
-                      <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT — {reps.dwgNo}</span>
+                      <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT - {reps.dwgNo}</span>
                       <h3 className="text-base font-semibold text-white group-hover:text-cu-gold-light transition-colors">
                         {reps.title}
                       </h3>
@@ -303,7 +303,7 @@ const Projects = () => {
           )
         })()}
 
-        {/* ── LC-003: Website Upgrader Pro — Full featured card ── */}
+        {/* ── LC-003: Website Upgrader Pro - Full featured card ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -321,9 +321,9 @@ const Projects = () => {
                   <Globe size={22} className="text-cu-gold" />
                 </div>
                 <div>
-                  <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT — LC-003</span>
+                  <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT - LC-003</span>
                   <h3 className="text-base font-semibold text-white group-hover:text-cu-gold transition-colors">
-                    Website Upgrader Pro — Web Design Studio
+                    Website Upgrader Pro - Web Design Studio
                   </h3>
                 </div>
               </div>
@@ -419,7 +419,7 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* ── LC-002: Trail Design — smaller card ── */}
+        {/* ── LC-002: Trail Design - smaller card ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}

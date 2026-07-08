@@ -204,7 +204,7 @@ const EngineerScene = () => {
         <motion.line x1="580" y1="164" x2="580" y2="254"
           stroke={W} strokeWidth="2.5" {...draw(0.28, 0.4)} />
 
-        {/* Drawing arm — extends toward board, fades out when stamp appears */}
+        {/* Drawing arm - extends toward board, fades out when stamp appears */}
         <motion.line x1="580" y1="190" x2="444" y2="170"
           stroke={W} strokeWidth="2.5"
           initial={{ pathLength: 0, opacity: 0 }}
@@ -223,7 +223,7 @@ const EngineerScene = () => {
           transition={{ duration: 10, delay: 0.7, times: [0, 0.04, 0.68, 0.73] }}
         />
 
-        {/* Celebration arm — fades in after stamp */}
+        {/* Celebration arm - fades in after stamp */}
         <motion.line x1="580" y1="190" x2="543" y2="145"
           stroke={W} strokeWidth="2.5"
           initial={{ opacity: 0 }}

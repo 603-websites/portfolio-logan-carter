@@ -15,11 +15,14 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
-      {/* Background — ski lift photo */}
+      {/* Background - ski lift photo */}
       <div className="absolute inset-0">
         <img
-          src="/images/ski-lift.jpg"
+          src="/images/ski-lift.webp"
           alt=""
+          width="1920"
+          height="1440"
+          fetchpriority="high"
           className="absolute inset-0 w-full h-full object-cover"
         />
         {/* Lighter overlay so the mountain is more visible */}
@@ -69,7 +72,7 @@ const Hero = () => {
                 <div className="h-px w-14 bg-cu-gold" />
               </motion.div>
 
-              {/* Last name — same size as LOGAN */}
+              {/* Last name - same size as LOGAN */}
               <motion.div
                 initial={{ opacity: 0, x: -60 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -140,8 +143,11 @@ const Hero = () => {
 
                 {/* Photo */}
                 <img
-                  src="/images/profile/logan.jpg"
+                  src="/images/profile/logan.webp"
                   alt="Logan Carter"
+                  width="800"
+                  height="800"
+                  loading="lazy"
                   className="w-full h-full object-cover object-top"
                 />
 
@@ -161,7 +167,7 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll cue — vertical on right */}
+      {/* Scroll cue - vertical on right */}
       <motion.div
         style={{ opacity: scrollOpacity }}
         className="absolute bottom-20 right-8 z-10 hidden lg:flex flex-col items-center gap-3"

@@ -11,7 +11,7 @@
 
   body {
     @apply bg-dark-950 text-dark-100 font-sans antialiased;
-    /* CU Silver grid — #A2A4A3 */
+    /* CU Silver grid - #A2A4A3 */
     background-image:
       linear-gradient(rgba(162, 164, 163, 0.09) 1px, transparent 1px),
       linear-gradient(90deg, rgba(162, 164, 163, 0.09) 1px, transparent 1px),
@@ -33,7 +33,7 @@
     ── */
   }
 
-  /* Hide native cursor on desktop — CustomCursor takes over */
+  /* Hide native cursor on desktop - CustomCursor takes over */
   @media (min-width: 1024px) {
     * { cursor: none !important; }
   }

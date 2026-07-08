@@ -141,8 +141,11 @@ const Education = () => {
               className="relative overflow-hidden rounded-xl"
             >
               <img
-                src="/images/cu-boulder.jpg"
+                src="/images/cu-boulder.webp"
                 alt="University of Colorado Boulder"
+                width="1200"
+                height="800"
+                loading="lazy"
                 className="w-full h-40 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
