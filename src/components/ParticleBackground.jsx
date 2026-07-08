@@ -33,7 +33,7 @@ const EQUATIONS = [
   'dQ = T dS',
 ]
 
-// Continuously drifting equations — wrap around screen edges
+// Continuously drifting equations - wrap around screen edges
 const FloatingEquations = () => {
   const containerRef = useRef(null)
 
@@ -163,7 +163,7 @@ const GearIcon = ({ r = 48, teeth = 12, color = '#CFB87C', opacity = 0.06, speed
 const ParticleBackground = () => (
   <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden">
 
-    {/* Drifting equations — above grid, below all content */}
+    {/* Drifting equations - above grid, below all content */}
     <FloatingEquations />
 
     {/* Floating annotations */}
@@ -186,7 +186,7 @@ const ParticleBackground = () => (
       </motion.span>
     ))}
 
-    {/* Origin crosshair — bottom left */}
+    {/* Origin crosshair - bottom left */}
     <div className="absolute bottom-6 left-6 opacity-[0.07]">
       <svg width="44" height="44" viewBox="0 0 44 44">
         <line x1="22" y1="0"  x2="22" y2="44" stroke="#CFB87C" strokeWidth="0.6" />
@@ -196,7 +196,7 @@ const ParticleBackground = () => (
       </svg>
     </div>
 
-    {/* Secondary mark — top right */}
+    {/* Secondary mark - top right */}
     <div className="absolute top-20 right-6 opacity-[0.05]">
       <svg width="30" height="30" viewBox="0 0 30 30">
         <line x1="15" y1="0"  x2="15" y2="30" stroke="#f59e0b" strokeWidth="0.5" />
@@ -205,17 +205,17 @@ const ParticleBackground = () => (
       </svg>
     </div>
 
-    {/* Rotating gear — bottom right */}
+    {/* Rotating gear - bottom right */}
     <div className="absolute bottom-8 right-10 opacity-100">
       <GearIcon r={52} teeth={14} color="#CFB87C" opacity={0.055} speed={28} />
     </div>
 
-    {/* Rotating gear — top left (amber, smaller, counter-clockwise) */}
+    {/* Rotating gear - top left (amber, smaller, counter-clockwise) */}
     <div className="absolute top-24 left-8 opacity-100">
       <GearIcon r={34} teeth={10} color="#f59e0b" opacity={0.05} speed={20} reverse />
     </div>
 
-    {/* Rotating gear — mid right (purple, tiny, fast) */}
+    {/* Rotating gear - mid right (purple, tiny, fast) */}
     <div className="absolute top-1/2 right-4 -translate-y-1/2 opacity-100">
       <GearIcon r={22} teeth={8} color="#8b5cf6" opacity={0.055} speed={14} />
     </div>

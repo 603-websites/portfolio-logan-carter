@@ -48,9 +48,9 @@ const highlights = [
 ]
 
 const lifePhotos = [
-  { src: '/images/ski-group.jpg',    label: 'Summit Run · CO' },
-  { src: '/images/golf-course.jpg',  label: 'On the Course' },
-  { src: '/images/rocky-mountain.jpg', label: 'Rocky Mountain NP' },
+  { src: '/images/ski-group.webp',    label: 'Summit Run · CO' },
+  { src: '/images/golf-course.webp',  label: 'On the Course' },
+  { src: '/images/rocky-mountain.webp', label: 'Rocky Mountain NP' },
 ]
 
 const About = () => {
@@ -148,7 +148,7 @@ const About = () => {
               <>
                 Long term, I'm driven toward{' '}
                 <span className="text-cu-gold-light font-medium">government contracting and defense engineering</span>:
-                aerospace systems, missile and engine design, and advanced propulsion — developing new ways
+                aerospace systems, missile and engine design, and advanced propulsion, developing new ways
                 to power and fuel the government projects that matter most.
               </>,
             ].map((para, i) => (
@@ -213,6 +213,7 @@ const About = () => {
                 <img
                   src={photo.src}
                   alt={photo.label}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-3">

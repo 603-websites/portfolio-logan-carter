@@ -215,7 +215,7 @@ const Experience = () => {
                       </div>
                     </div>
                   ) : (
-                    // Empty on left — date label
+                    // Empty on left - date label
                     <div className="hidden md:flex justify-end pr-4">
                       <div className="text-right">
                         <p className="font-mono text-[10px] text-dark-600 tracking-wider">{exp.period}</p>
@@ -286,7 +286,7 @@ const Experience = () => {
                       </div>
                     </div>
                   ) : (
-                    // Empty on right — date label
+                    // Empty on right - date label
                     <div className="hidden md:flex justify-start pl-4">
                       <div>
                         <p className="font-mono text-[10px] text-dark-600 tracking-wider">{exp.period}</p>
