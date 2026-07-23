@@ -131,7 +131,7 @@ const projects = [
   },
 ]
 
-// Website Upgrader Pro feature cards
+// ORYX Technologies feature cards
 const studioFeatures = [
   {
     icon: Code2,
@@ -153,8 +153,8 @@ const studioFeatures = [
   },
   {
     icon: Building2,
-    title: 'Growing Into Companies',
-    desc: "Our goal is to expand beyond portfolios, landing pages, marketing sites, and full web presences for businesses that need one.",
+    title: 'Full-Service Studio',
+    desc: "Beyond websites: local SEO, phone & text follow-up, client dashboards, and social ad campaigns for businesses that need a full web presence.",
     color: '#A2A4A3',
   },
 ]
@@ -303,7 +303,7 @@ const Projects = () => {
           )
         })()}
 
-        {/* ── LC-003: Website Upgrader Pro - Full featured card ── */}
+        {/* ── LC-003: ORYX Technologies - Full featured card ── */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -323,7 +323,7 @@ const Projects = () => {
                 <div>
                   <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT - LC-003</span>
                   <h3 className="text-base font-semibold text-white group-hover:text-cu-gold transition-colors">
-                    Website Upgrader Pro - Web Design Studio
+                    ORYX Technologies — Web Design & Marketing Studio
                   </h3>
                 </div>
               </div>
@@ -337,8 +337,8 @@ const Projects = () => {
                 <div>
                   <p className="text-dark-300 text-sm leading-relaxed mb-4">
                     I co-founded{' '}
-                    <span className="text-cu-gold font-semibold">Website Upgrader Pro</span>{' '}
-                    with Louis Sader, a registered web design studio.
+                    <span className="text-cu-gold font-semibold">ORYX Technologies</span>{' '}
+                    with Louis Sader — a registered New Hampshire web design & marketing studio.
                     We've grown it to <span className="text-white font-medium">3 retained clients generating $900/month in recurring revenue</span>,
                     building beautiful, unique, affordable websites for professionals and businesses who deserve more than a cookie-cutter template.
                   </p>
@@ -374,13 +374,13 @@ const Projects = () => {
 
                   {/* CTA */}
                   <a
-                    href="https://websiteupgraderpro.com"
+                    href="https://oryxtechnologiesllc.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 bg-cu-gold text-black text-sm font-bold tracking-[0.12em] uppercase hover:bg-cu-gold-light transition-colors duration-200 group/btn"
                   >
                     <Globe size={15} />
-                    VIEW WEBSITE
+                    VISIT ORYX TECHNOLOGIES
                     <ExternalLink size={12} className="opacity-60 group-hover/btn:opacity-100 transition-opacity" />
                   </a>
                 </div>
