@@ -5,7 +5,7 @@ import { ChevronDown, Linkedin } from 'lucide-react'
 const marqueeItems = [
   'CU BOULDER','MECHANICAL ENGINEERING','MATH MINOR','AEROSPACE MINOR',
   'BOULDER, CO','SOLIDWORKS','MATLAB','ANSYS FEA','3D PRINTING','WEB DEVELOPER',
-  'WEBSITE UPGRADER PRO','SKI ENTHUSIAST','GOLFER','CIRTRONICS INTERN','CLASS OF 2027',
+  'ORYX TECHNOLOGIES','SKI ENTHUSIAST','GOLFER','CIRTRONICS INTERN','CLASS OF 2027',
 ]
 const repeated = [...marqueeItems, ...marqueeItems, ...marqueeItems]
 
