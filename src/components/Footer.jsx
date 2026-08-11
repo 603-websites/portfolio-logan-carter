@@ -15,6 +15,7 @@ const Footer = () => {
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
+    { name: 'Accessibility', href: '#accessibility' },
   ]
 
   const socialLinks = [

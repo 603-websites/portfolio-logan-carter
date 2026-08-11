@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Contact from './components/Contact'
+import Accessibility from './components/Accessibility'
 import Footer from './components/Footer'
 import ParticleBackground from './components/ParticleBackground'
 import NotFound from './components/NotFound'
@@ -49,6 +50,7 @@ function App() {
           <Experience />
           <Skills />
           <Contact />
+          <Accessibility />
         </main>
         <Footer />
       </div>
