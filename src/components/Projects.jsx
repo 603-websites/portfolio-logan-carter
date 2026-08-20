@@ -336,7 +336,7 @@ const Projects = () => {
                 <div>
                   <span className="font-mono text-[9px] text-dark-600 tracking-widest block">PROJECT - LC-003</span>
                   <h3 className="text-base font-semibold text-white group-hover:text-cu-gold transition-colors">
-                    ORYX Technologies — Web Design & Marketing Studio
+                    ORYX Technologies: Web Design & Marketing Studio
                   </h3>
                 </div>
               </div>
@@ -351,7 +351,7 @@ const Projects = () => {
                   <p className="text-dark-300 text-sm leading-relaxed mb-4">
                     I co-founded{' '}
                     <span className="text-cu-gold font-semibold">ORYX Technologies</span>{' '}
-                    with Louis Sader — a registered New Hampshire web design & marketing studio.
+                    with Louis Sader, a registered New Hampshire web design & marketing studio.
                     We've grown it to <span className="text-white font-medium">3 retained clients generating $900/month in recurring revenue</span>,
                     building beautiful, unique, affordable websites for professionals and businesses who deserve more than a cookie-cutter template.
                   </p>
