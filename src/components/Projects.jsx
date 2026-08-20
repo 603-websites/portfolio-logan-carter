@@ -129,6 +129,19 @@ const projects = [
     date:         '2026',
     videoSrc:     '/videos/reps-demo.mp4',
   },
+  {
+    title:        'VixFix Contracting & Home Improvement',
+    description:  'An ORYX client build for Justin Vickery, who runs a painting, drywall, water damage, flooring, and carpentry business out of Concord, NH and serves southern New Hampshire. We shipped a 32 page mobile-first static site on Cloudflare Pages, then kept working on it: form submissions were being silently dropped, so we traced the cause, fixed it, and confirmed delivery end to end with live test submissions. Ongoing engagement since April 2026.',
+    logo:         '/images/projects/vixfix-logo.png',
+    highlights:   ['32 page mobile-first static site on Cloudflare Pages', '16 service and town guide pages: Nashua, Manchester, Salem, Bedford, Concord', 'Free estimate form on every page + sticky mobile call button', 'Google Business Profile launched: 5.0 stars across 6 reviews', 'Structured data, security headers, accessibility statement', 'Privacy-friendly analytics with lead conversions tracked'],
+    technologies: ['HTML', 'CSS', 'JavaScript', 'Cloudflare Pages', 'Umami', 'Local SEO'],
+    featured:     false,
+    accent:       '#E2CB04',
+    dwgNo:        'LC-005',
+    rev:          'A',
+    date:         '2026',
+    url:          'https://vixfixpro.com',
+  },
 ]
 
 // ORYX Technologies feature cards
@@ -418,6 +431,70 @@ const Projects = () => {
             </div>
           </div>
         </motion.div>
+
+        {/* ── LC-005: VixFix Contracting - ORYX client build ── */}
+        {(() => {
+          const vixfix = projects[3]
+          return (
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.38 }}
+              className="relative mb-8 group"
+            >
+              <div className="glass rounded-2xl overflow-hidden card-hover flex flex-col">
+                <div className="h-[2px]" style={{ background: `linear-gradient(90deg, ${vixfix.accent}, transparent)` }} />
+                <div className="flex items-center justify-between px-5 py-4 border-b border-dark-700/40">
+                  <div className="flex items-center gap-3">
+                    <img
+                      src={vixfix.logo}
+                      alt="VixFix Contracting and Home Improvement logo"
+                      className="w-9 h-9 rounded-lg object-contain shrink-0"
+                      style={{ border: `1px solid ${vixfix.accent}40` }}
+                      loading="lazy"
+                    />
+                    <span className="font-mono text-[9px] text-dark-600 tracking-widest">{vixfix.dwgNo}</span>
+                  </div>
+                  <TitleBlock dwgNo={vixfix.dwgNo} rev={vixfix.rev} date={vixfix.date} />
+                </div>
+                <div className="p-5">
+                  <h3 className="text-base font-semibold text-white mb-2 group-hover:text-cu-gold-light transition-colors">
+                    {vixfix.title}
+                  </h3>
+                  <p className="text-dark-400 text-sm mb-4 leading-relaxed">{vixfix.description}</p>
+                  <div className="grid sm:grid-cols-2 gap-1.5 mb-4">
+                    {vixfix.highlights.map(h => (
+                      <div key={h} className="flex items-center gap-2 text-xs text-dark-300">
+                        <span className="w-1 h-1 rounded-full shrink-0" style={{ backgroundColor: vixfix.accent }} />
+                        {h}
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mb-5 pt-4 border-t border-dark-700/40">
+                    {vixfix.technologies.map(tech => (
+                      <span key={tech} className="blueprint-badge">{tech}</span>
+                    ))}
+                  </div>
+                  <a
+                    href={vixfix.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-cu-gold text-black text-sm font-bold tracking-[0.12em] uppercase hover:bg-cu-gold-light transition-colors duration-200 group/btn"
+                  >
+                    <Globe size={15} />
+                    VISIT VIXFIXPRO.COM
+                    <ExternalLink size={12} className="opacity-60 group-hover/btn:opacity-100 transition-opacity" />
+                  </a>
+                </div>
+              </div>
+              <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="border-2 rounded px-2 py-0.5 rotate-[-12deg]" style={{ borderColor: `${vixfix.accent}66` }}>
+                  <span className="font-mono text-[9px] tracking-widest font-bold" style={{ color: `${vixfix.accent}99` }}>LIVE</span>
+                </div>
+              </div>
+            </motion.div>
+          )
+        })()}
 
         {/* ── LC-002: Trail Design - smaller card ── */}
         <motion.div
