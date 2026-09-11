@@ -47,16 +47,32 @@ const experiences = [
     technologies: ['Contract Manufacturing', 'DFM', 'NPI', 'ISO 9001/13485'],
   },
   {
-    title:   'Sales Intern',
-    company: 'ALKU',
-    location:'Andover, MA',
-    period:  'June 2025 – Dec 2025',
-    active:  false,
+    title:   'Co-Founder',
+    company: 'Oryx Technologies',
+    location:'Windham, NH',
+    period:  'Jan 2026 – Present',
+    active:  true,
     color:   '#38bdf8',
     dwg:     'EXP-002',
     description: [
+      'Co-founded a registered web design studio and grew it to 3 retained clients generating $900/month in recurring revenue.',
+      'Deliver fully custom, hand-coded sites in React, Vite, and Tailwind CSS, no templates, with Framer Motion animations and mobile-first layouts.',
+      'Manage the full client lifecycle: sales, scoping, design, development, deployment, and ongoing maintenance.',
+      'Deploy on Vercel for fast load times and run targeted Meta (Facebook & Instagram) ad campaigns for clients.',
+    ],
+    technologies: ['React', 'Vite', 'Tailwind CSS', 'Framer Motion', 'Vercel', 'Meta Ads'],
+  },
+  {
+    title:   'Sales Intern',
+    company: 'ALKU',
+    location:'Andover, MA',
+    period:  'Jun 2025 – Dec 2025',
+    active:  false,
+    color:   '#f59e0b',
+    dwg:     'EXP-003',
+    description: [
       'Sourced and screened candidates for specialized engineering roles, supporting full-cycle recruiting in a fast-paced consulting environment.',
-      'Gained valuable communication skills by engaging with PhD engineers with 20+ years of experience, helping to place them in highly competitive roles.',
+      'Built communication skills engaging PhD engineers with 20+ years of experience to place them in highly competitive roles.',
     ],
     technologies: ['Recruiting', 'Communication', 'Engineering Talent', 'Networking'],
   },
@@ -66,39 +82,12 @@ const experiences = [
     location:'Litchfield, NH',
     period:  'Apr 2024 – Sep 2024',
     active:  false,
-    color:   '#f59e0b',
-    dwg:     'EXP-003',
-    description: [
-      'Collected golf balls daily from the driving range to ensure smooth flow of play and maintained all equipment.',
-      'Cleaned and maintained every cart after use, worked the cash register, and provided customer assistance.',
-    ],
-    technologies: ['Operations', 'Customer Service', 'Equipment Maintenance'],
-  },
-  {
-    title:   'Medical Records Technician',
-    company: 'Derry Medical Center',
-    location:'Derry, NH',
-    period:  'May 2023 – Aug 2023',
-    active:  false,
-    color:   '#8b5cf6',
+    color:   '#10b981',
     dwg:     'EXP-004',
     description: [
-      'Assisted in evaluation and selection of medical records, identifying those that were current and those requiring re-evaluation.',
+      'Maintained driving range and cart fleet operations while assisting customers at the register.',
     ],
-    technologies: ['Data Management', 'Organization', 'Attention to Detail'],
-  },
-  {
-    title:   'Landscaping Crew',
-    company: "Trey's Amigos",
-    location:'Windham, NH',
-    period:  'May 2021 – Sep 2022',
-    active:  false,
-    color:   '#10b981',
-    dwg:     'EXP-005',
-    description: [
-      'Performed mowing, trimming, edging, weeding, and mulching lawns. Installed underground piping systems.',
-    ],
-    technologies: ['Physical Labor', 'Piping Installation', 'Teamwork'],
+    technologies: ['Operations', 'Customer Service', 'Equipment Maintenance'],
   },
 ]
 
@@ -107,7 +96,7 @@ const Experience = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="experience" className="py-24 relative">
+    <section id="experience" className="py-24 relative bg-dark-900/20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -129,7 +118,7 @@ const Experience = () => {
             Professional <span className="gradient-text">Experience</span>
           </h2>
           <p className="section-subheading mx-auto">
-            A diverse range of experience demonstrating leadership, work ethic, and adaptability.
+            Hands-on manufacturing engineering, a studio I co-founded, and the work ethic behind both.
           </p>
         </motion.div>
 

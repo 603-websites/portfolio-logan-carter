@@ -11,8 +11,8 @@ const Footer = () => {
   const footerLinks = [
     { name: 'About', href: '#about' },
     { name: 'Education', href: '#education' },
-    { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
     { name: 'Accessibility', href: '#accessibility' },

@@ -92,7 +92,7 @@ const TitleBlock = ({ dwgNo, rev, date }) => (
 const projects = [
   {
     title:        'GEEN 1400 - Engineering Design Project',
-    description:  'Multi-phase engineering design project at CU Boulder encompassing concept development, CAD modeling, fabrication, and testing of working prototypes with iterative design improvements.',
+    description:  'Multi-phase engineering design project at the University of Colorado Boulder (Jan to May 2026): concept development, CAD modeling, fabrication, and testing of working prototypes, integrating analysis into design improvements and presenting at the Design Expo.',
     icon:         Cog,
     highlights:   ['Full design lifecycle execution', 'CAD modeling & prototyping', 'Testing & validation process', 'Design Expo final presentation'],
     technologies: ['SolidWorks', 'Prototyping', '3D Printing', 'Team Collaboration', 'Testing'],
@@ -100,7 +100,7 @@ const projects = [
     accent:       '#0ea5e9',
     dwgNo:        'LC-001',
     rev:          'B',
-    date:         '2025',
+    date:         '2026',
     videoId:      'sggqbIs09tU',
   },
   {
@@ -177,7 +177,7 @@ const Projects = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' })
 
   return (
-    <section id="projects" className="py-24 relative bg-dark-900/20">
+    <section id="projects" className="py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}

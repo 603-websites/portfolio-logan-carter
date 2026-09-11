@@ -74,12 +74,12 @@ const gauges = [
 ]
 
 const skillCategories = [
-  { title: 'CAD & Design',             skills: ['SolidWorks', 'Pro-E / Creo', 'Mechanical Design', '3D Printing']            },
+  { title: 'CAD & Design',             skills: ['SolidWorks (CAD)', 'Creo (Pro-E)', 'Mechanical Design', '3D Printing']            },
   { title: 'Analysis & Simulation',    skills: ['MATLAB', 'Ansys Workbench (FEA)', 'Data Analysis', 'Excel']                  },
   { title: 'Engineering Fundamentals', skills: ['Thermodynamics', 'Materials Science', 'Manufacturing Processes', 'Calculus / Diff Eq'] },
-  { title: 'Manufacturing & Quality',  skills: ['5S Lean', 'Gemba Walk', 'Prototyping', 'Testing & Validation']               },
+  { title: 'Manufacturing & Quality',  skills: ['5S Lean', 'Gemba Walk', 'Prototyping', 'Troubleshooting / Testing']               },
   { title: 'Professional',             skills: ['Leadership', 'Communication', 'Problem Solving', 'Time Management']          },
-  { title: 'Additional Tools',         skills: ['Web Development', 'Project Planning', 'Technical Writing', 'Troubleshooting'] },
+  { title: 'Additional Tools',         skills: ['Web Development (React / Tailwind)', 'Project Planning', 'Technical Writing', 'Claude AI Workflows'] },
 ]
 
 const coursework = [
@@ -148,7 +148,7 @@ const Skills = () => {
           </div>
 
           <p className="font-mono text-[8px] text-dark-700 text-right mt-4 tracking-widest">
-            CALIBRATED: 2025 // UNIT: % PROFICIENCY
+            CALIBRATED: 2026 // UNIT: % PROFICIENCY
           </p>
         </motion.div>
 

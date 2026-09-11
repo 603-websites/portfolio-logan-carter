@@ -10,20 +10,20 @@ const Education = () => {
   const education = [
     {
       degree: "B.S. Mechanical Engineering",
-      school: "University of Colorado Boulder",
-      location: "Boulder, CO",
-      period: "Expected December 2027",
-      honors: "3.6 GPA | ABET Accredited",
-      minors: "Math & Aerospace Engineering",
+      school: "University of Massachusetts Lowell",
+      location: "Lowell, MA",
+      period: "Expected May 2028",
+      honors: "3.6 GPA | Honors College | Dean's List Fall 2024 / Spring 2025",
+      minors: "Mathematics & Finance",
       current: true
     },
     {
-      degree: "Mechanical Engineering",
-      school: "University of Massachusetts Lowell",
-      location: "Lowell, MA",
-      period: "Completed May 2025",
-      honors: "Dean's List | Honors College | 3.6 GPA",
-      minors: "Math & Finance",
+      degree: "Mechanical Engineering (Prior Coursework)",
+      school: "University of Colorado Boulder",
+      location: "Boulder, CO",
+      period: "2025 – 2026",
+      honors: "3.6 GPA | ABET-Accredited ME Program",
+      minors: "Mathematics & Finance",
       current: false
     }
   ]
@@ -31,8 +31,8 @@ const Education = () => {
   const highlights = [
     {
       icon: Award,
-      title: "Dean's List",
-      detail: "Fall 2024 / Spring 2025"
+      title: "Dean's List & Honors College",
+      detail: "Fall 2024 / Spring 2025 · UMass Lowell"
     },
     {
       icon: GraduationCap,
@@ -133,7 +133,7 @@ const Education = () => {
 
           {/* Sidebar: CU photo + clubs */}
           <div className="space-y-6">
-            {/* CU Boulder campus photo */}
+            {/* CU Boulder campus photo (prior coursework) */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -151,7 +151,7 @@ const Education = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
                 <div>
                   <p className="font-mono text-[9px] text-cu-gold tracking-[0.25em] uppercase">University of Colorado</p>
-                  <p className="font-mono text-[8px] text-white/50 mt-0.5">Boulder, CO · Est. 1876</p>
+                  <p className="font-mono text-[8px] text-white/50 mt-0.5">Boulder, CO · Prior Coursework 2025 – 2026</p>
                 </div>
               </div>
               <div className="absolute top-2 left-2 w-5 h-5 border-l border-t border-cu-gold/60" />

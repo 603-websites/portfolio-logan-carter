@@ -20,8 +20,8 @@ const highlights = [
   {
     icon: GraduationCap,
     title:  'B.S. Mechanical Engineering',
-    sub:    'University of Colorado Boulder',
-    detail: 'Minors: Mathematics & Aerospace',
+    sub:    'University of Massachusetts Lowell',
+    detail: 'Minors: Mathematics & Finance  |  May 2028',
     color:  '#CFB87C',
   },
   {
@@ -107,8 +107,8 @@ const About = () => {
         >
           <StatBlock value="3.6" label="GPA" delay={0.2} isInView={isInView} />
           <StatBlock value="2"   label="Universities" delay={0.3} isInView={isInView} />
-          <StatBlock value="4+"  label="Yrs Experience" delay={0.4} isInView={isInView} />
-          <StatBlock value="3"   label="Projects" delay={0.5} isInView={isInView} />
+          <StatBlock value="2"   label="Internships" delay={0.4} isInView={isInView} />
+          <StatBlock value="4"   label="Projects" delay={0.5} isInView={isInView} />
         </motion.div>
 
         {/* ── Two-column body ─────────────────────────────────── */}
@@ -125,31 +125,29 @@ const About = () => {
               <>
                 I'm a{' '}
                 <span className="text-cu-gold-light font-medium">Mechanical Engineering student</span>{' '}
-                at the University of Colorado Boulder with minors in Mathematics and Aerospace Engineering,
-                currently interning at{' '}
-                <span className="text-cu-gold-light font-medium">Cirtronics Corporation</span>, a contract
-                manufacturer serving the medical device, robotics, and defense industries. My engineering
-                journey is fueled by a deep curiosity for how things work and a drive to design innovative solutions.
+                at the University of Massachusetts Lowell (3.6 GPA, Honors College) with minors in Mathematics
+                and Finance, graduating May 2028. I'm targeting a{' '}
+                <span className="text-cu-gold-light font-medium">Summer 2027 mechanical engineering internship in defense and aerospace</span>,
+                where the hardware has to perform when it matters. I'm a U.S. Citizen and eligible to obtain a
+                security clearance.
               </>,
               <>
-                Before transferring to CU Boulder, I completed coursework at{' '}
-                <span className="text-cu-gold-light font-medium">UMass Lowell</span>{' '}
-                where I made Dean's List and was part of the Honors College. I was also accepted into the{' '}
-                <span className="text-cu-gold-light font-medium">United States Naval Academy</span>{' '}
-                Class of 2028, demonstrating my commitment to discipline and service.
+                Right now I'm a Mechanical Engineering Intern at{' '}
+                <span className="text-cu-gold-light font-medium">Cirtronics Corporation</span>, an FDA- and
+                ITAR-registered contract manufacturer serving the medical device, robotics, and defense industries.
+                I work alongside the mechanical engineering team on electro-mechanical assembly and box-build
+                projects, contributing to fixturing, assembly documentation, and design-for-manufacturability
+                reviews, and I shadow new product introduction under ISO 9001/13485. My toolset is{' '}
+                <span className="text-cu-gold-light font-medium">SolidWorks, Creo, Ansys Workbench, MATLAB, Excel, and 3D printing</span>.
               </>,
               <>
-                My technical foundation spans{' '}
-                <span className="text-cu-gold-light font-medium">CAD design, FEA, thermodynamics, and controls</span>:
-                SolidWorks modeling, ANSYS simulation, Arduino-based data acquisition, and MATLAB analysis.
-                I apply that toolset to everything from multi-phase design projects to energy-harvesting
-                prototypes.
-              </>,
-              <>
-                Long term, I'm driven toward{' '}
-                <span className="text-cu-gold-light font-medium">government contracting and defense engineering</span>:
-                aerospace systems, missile and engine design, and advanced propulsion, developing new ways
-                to power and fuel the government projects that matter most.
+                Outside the shop, I co-founded{' '}
+                <span className="text-cu-gold-light font-medium">Oryx Technologies</span>, a web design studio
+                where I hand-code client sites in React and Tailwind and manage the full client lifecycle from
+                sales to deployment. Building a business alongside my degree has sharpened how I scope problems,
+                communicate with stakeholders, and ship work that holds up. I previously studied at the
+                University of Colorado Boulder and was accepted to the{' '}
+                <span className="text-cu-gold-light font-medium">United States Naval Academy</span> Class of 2028.
               </>,
             ].map((para, i) => (
               <motion.p

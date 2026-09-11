@@ -45,7 +45,7 @@ const svg = `
   <rect x="80" y="320" width="200" height="3" rx="1.5" fill="url(#accent)"/>
 
   <!-- Description -->
-  <text x="80" y="370" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#d6d3d1">University of Colorado Boulder</text>
+  <text x="80" y="370" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#d6d3d1">University of Massachusetts Lowell</text>
   <text x="80" y="405" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#d6d3d1">SolidWorks  |  MATLAB  |  Ansys  |  3D Printing</text>
 
   <!-- Bottom tags -->
@@ -56,7 +56,7 @@ const svg = `
   <text x="280" y="494" font-family="monospace" font-size="14" text-anchor="middle" fill="#f59e0b">Dean's List</text>
 
   <rect x="380" y="470" width="180" height="36" rx="18" fill="#1c1917" stroke="#44403c" stroke-width="1"/>
-  <text x="470" y="494" font-family="monospace" font-size="14" text-anchor="middle" fill="#f59e0b">ABET Accredited</text>
+  <text x="470" y="494" font-family="monospace" font-size="14" text-anchor="middle" fill="#f59e0b">Honors College</text>
 
   <!-- Bottom border accent -->
   <rect x="0" y="626" width="1200" height="4" fill="url(#accent)"/>

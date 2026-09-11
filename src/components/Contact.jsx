@@ -23,7 +23,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Windham, NH / Boulder, CO",
+      value: "Windham, NH",
       href: null
     }
   ]
@@ -109,8 +109,8 @@ const Contact = () => {
               <span className="text-green-400 font-medium">Seeking Internships</span>
             </div>
             <p className="text-dark-400 text-sm">
-              Open to mechanical engineering internships, co-ops, and project collaborations.
-              I typically respond within 24 hours.
+              Seeking a Summer 2027 mechanical engineering internship in defense and aerospace.
+              U.S. Citizen, eligible to obtain a security clearance. I typically respond within 24 hours.
             </p>
           </div>
         </motion.div>

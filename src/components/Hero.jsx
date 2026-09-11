@@ -3,9 +3,9 @@ import { ChevronDown, Linkedin } from 'lucide-react'
 
 // Marquee items (rendered at bottom of hero so they're visible on first load)
 const marqueeItems = [
-  'CU BOULDER','MECHANICAL ENGINEERING','MATH MINOR','AEROSPACE MINOR',
-  'BOULDER, CO','SOLIDWORKS','MATLAB','ANSYS FEA','3D PRINTING','WEB DEVELOPER',
-  'ORYX TECHNOLOGIES','SKI ENTHUSIAST','GOLFER','CIRTRONICS INTERN','CLASS OF 2027',
+  'UMASS LOWELL','MECHANICAL ENGINEERING','MATH MINOR','FINANCE MINOR','HONORS COLLEGE',
+  'WINDHAM, NH','SOLIDWORKS','CREO','ANSYS FEA','MATLAB','3D PRINTING','DEFENSE & AEROSPACE',
+  'ORYX TECHNOLOGIES','SKI ENTHUSIAST','GOLFER','CIRTRONICS INTERN','CLASS OF 2028',
 ]
 const repeated = [...marqueeItems, ...marqueeItems, ...marqueeItems]
 
@@ -44,7 +44,7 @@ const Hero = () => {
                 transition={{ delay: 0.2 }}
                 className="text-cu-gold font-mono tracking-[0.25em] text-xs sm:text-sm uppercase mb-4"
               >
-                MECHANICAL ENGINEERING · UNIVERSITY OF COLORADO BOULDER
+                MECHANICAL ENGINEERING · UNIVERSITY OF MASSACHUSETTS LOWELL
               </motion.p>
 
               {/* Big first name */}
@@ -67,7 +67,7 @@ const Hero = () => {
               >
                 <div className="h-px w-14 bg-cu-gold" />
                 <span className="text-cu-gold font-mono tracking-[0.25em] text-base sm:text-lg uppercase">
-                  CU BOULDER
+                  UMASS LOWELL
                 </span>
                 <div className="h-px w-14 bg-cu-gold" />
               </motion.div>
@@ -91,7 +91,7 @@ const Hero = () => {
                 transition={{ delay: 0.65 }}
                 className="text-white/70 text-base sm:text-lg mb-10 font-light tracking-wide"
               >
-                Mechanical Engineering · Math &amp; Aerospace Minors · Boulder, CO
+                Mechanical Engineering · Math &amp; Finance Minors · Windham, NH
               </motion.p>
 
               {/* CTA buttons */}
@@ -157,7 +157,7 @@ const Hero = () => {
                     Logan Carter
                   </p>
                   <p className="font-mono text-[8px] text-white/45 tracking-wider mt-0.5">
-                    Mechanical Engineer · CU Boulder
+                    Mechanical Engineer · UMass Lowell
                   </p>
                 </div>
               </div>
