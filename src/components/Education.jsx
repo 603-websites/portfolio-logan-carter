@@ -133,7 +133,7 @@ const Education = () => {
 
           {/* Sidebar: CU photo + clubs */}
           <div className="space-y-6">
-            {/* CU Boulder campus photo (prior coursework) */}
+            {/* UMass Lowell campus photo */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -141,17 +141,17 @@ const Education = () => {
               className="relative overflow-hidden rounded-xl"
             >
               <img
-                src="/images/cu-boulder.webp"
-                alt="University of Colorado Boulder"
-                width="1200"
-                height="800"
+                src="/images/umass-lowell.webp"
+                alt="University of Massachusetts Lowell campus"
+                width="603"
+                height="331"
                 loading="lazy"
                 className="w-full h-40 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-4">
                 <div>
-                  <p className="font-mono text-[9px] text-cu-gold tracking-[0.25em] uppercase">University of Colorado</p>
-                  <p className="font-mono text-[8px] text-white/50 mt-0.5">Boulder, CO · Prior Coursework 2025 – 2026</p>
+                  <p className="font-mono text-[9px] text-cu-gold tracking-[0.25em] uppercase">University of Massachusetts Lowell</p>
+                  <p className="font-mono text-[8px] text-white/50 mt-0.5">Lowell, MA · B.S. Mechanical Engineering 2026 – 2028</p>
                 </div>
               </div>
               <div className="absolute top-2 left-2 w-5 h-5 border-l border-t border-cu-gold/60" />
