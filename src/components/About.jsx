@@ -132,12 +132,11 @@ const About = () => {
                 security clearance.
               </>,
               <>
-                Right now I'm a Mechanical Engineering Intern at{' '}
+                This past summer I was a Mechanical Engineering Intern at{' '}
                 <span className="text-cu-gold-light font-medium">Cirtronics Corporation</span>, an FDA- and
                 ITAR-registered contract manufacturer serving the medical device, robotics, and defense industries.
-                I work alongside the mechanical engineering team on electro-mechanical assembly and box-build
-                projects, contributing to fixturing, assembly documentation, and design-for-manufacturability
-                reviews, and I shadow new product introduction under ISO 9001/13485. My toolset is{' '}
+                I worked alongside the mechanical engineering team on electro-mechanical assembly and box-build
+                projects, and shadowed senior engineers through new product introduction. My toolset is{' '}
                 <span className="text-cu-gold-light font-medium">SolidWorks, Creo, Ansys Workbench, MATLAB, Excel, and 3D printing</span>.
               </>,
               <>
